@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="#" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="login/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="login/css/estilos.css">
+    <link rel="stylesheet" href="login/js/plugins/sweet_alert2/sweetalert2.min.css">
+</head>
+
+<body>
+
+    <!-- Pantalla de carga -->
+    <div class="loader">
+        <div class="loader-img">
+            <img src="public/img/food4me.png" alt="">
+        </div>
+        <!-- <div class="ring"></div> -->
+    </div>
+    <script>
+        const loader = document.querySelector(".loader");
+        window.onload = function () {
+            setTimeout(function () {
+                loader.style.opacity = "0";
+                setTimeout(function () {
+                    loader.style.display = "none";
+                }, 500);
+            }, 1500);
+        }
+    </script>
+
+    <div class="contenedor"><br><br><br>
+        <h3 class="text-center">Bienvenido a Food4me</h3>
+
+        <form id="formLogin" class="form" action="" method="post">
+            <h3 class="text-center text-dark">Iniciar Sesión</h3>
+            <div class="form-group">
+                <label for="usuario" class="text-dark">Usuario</label><br>
+                <input type="text" name="usuario" id="usuario" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password" class="text-dark">Contraseña</label><br>
+                <input type="password" name="password" id="password" class="form-control">
+            </div>
+            <div class="form-group text-center">
+                <input type="submit" name="submit" class="btn btn-dark btn-lg btn-block" value="Conectar">
+            </div>
+        </form>
+
+    </div>
+
+    <div class="a">
+        <a href="views/crear_cuenta.php" class="btn btn-primary">Crear una cuenta</a>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="login/js/jquery/jquery-3.3.1.min.js"></script>
+    <script src="login/js/popper/popper.min.js"></script>
+    <script src="login/css/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="login/js/plugins/sweet_alert2/sweetalert2.all.min.js"></script>
+    <script src="codigo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+a {
+	list-style: none;
+	text-decoration: none;
+}
+/* ---------NAV-------- */
+.header {
+	background: #fff;
+	top: 0;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+	-webkit-box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.66);
+	-moz-box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.66);
+	box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.66);
+}
+#menu {
+	list-style: none;
+}
+.logo {
+	padding: 2em 3.8em;
+	background-image: url("../img/food4me.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.man {
+	text-decoration: none;
+	font-size: 2.7rem;
+	text-transform: uppercase;
+
+	color: #415164;
+}
+
+/* Desktop  */
+.navbar {
+	width: 100%;
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 30px;
+	box-sizing: border-box;
+}
+#toggler {
+	display: none;
+}
+.icon,
+.close-btn {
+	display: none;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+.links {
+	display: flex;
+	list-style: none;
+}
+.links li {
+	margin-right: 24px;
+	padding-top: 15px;
+}
+.links li a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #575757;
+	font-size: 1em;
+	color: #415164;
+	padding: 1em;
+	-webkit-transition: 0.6s;
+	-moz-transition: 0.6s;
+	-o-transition: 0.6s;
+	transition: 0.6s;
+	border-radius: 3px;
+}
+.backdrop {
+	display: none;
+	animation: 0.4s ease-in-out fadeIn forwards;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0);
+	cursor: pointer;
+}
+
+@keyframes fadeIn {
+	to {
+		background: rgba(0, 0, 0, 0.8);
+	}
+}
+/* Mobile view */
+@media only screen and (max-width: 1100px) {
+	.icon,
+	.close-btn {
+		display: block;
+		cursor: pointer;
+	}
+	.icon {
+		position: absolute;
+		right: 24px;
+	}
+	.links {
+		position: absolute;
+		top: 0;
+		height: 100vh;
+		width: 50%;
+		right: -50%;
+		background: #fff;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		z-index: 110;
+		transition: 0.3s ease-in-out;
+	}
+	.links li {
+		margin-right: 0;
+		margin-bottom: 50px;
+		font-size: 1.5em;
+	}
+	.close-btn {
+		position: absolute;
+		top: 24px;
+		right: -50vh;
+		color: #575757;
+		font-size: 2em;
+		z-index: 120;
+		transition: 0.3s ease-in-out;
+	}
+	.close-btn:hover {
+		color: #000;
+		cursor: pointer;
+	}
+
+	input#toggler:checked ~ .links-wrapper .links {
+		right: 0;
+	}
+	input#toggler:checked ~ .links-wrapper .close-btn {
+		right: 32px;
+	}
+	input#toggler:checked ~ .links-wrapper .backdrop {
+		display: block;
+	}
+}
+
+.container {
+	margin-top: 150px;
+}

@@ -1,0 +1,43 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.footer-contenedor {
+	width: 100%;
+	background-image: url(../img/fundo.png);
+	text-align: center;
+	color: #fff;
+	bottom: 0;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+
+footer p {
+	margin: 0;
+	font-size: 1.2em;
+}
+a {
+	text-decoration: none;
+}
+footer img {
+	width: 50px;
+	height: 50px;
+	padding-left: 5px;
+	padding-right: 5px;
+	transition: 400ms ease;
+}
+footer img:hover {
+	transform: scale(1.05);
+}
+.copyright {
+	line-height: 25px;
+}
+.top {
+	z-index: 10;
+	color: #fff;
+	text-align: right;
+}
+.top:hover {
+	color: #49cb1c;
+}
